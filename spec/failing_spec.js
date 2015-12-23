@@ -1,5 +1,3 @@
-console.log('wahhoo!')
-
 describe('success', function () {
   it('is real', function () {
     expect(true).toBe(true);
