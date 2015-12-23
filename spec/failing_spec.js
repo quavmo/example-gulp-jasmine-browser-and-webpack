@@ -1,6 +1,11 @@
+console.log('wahhoo!')
 
-describe('failure', function () {
+describe('success', function () {
   it('is real', function () {
-    expect(true).toBe(false);
+    expect(true).toBe(true);
+  });
+
+  it('eludes us', function () {
+    expect(1).toBe(...[1]);
   });
 });
