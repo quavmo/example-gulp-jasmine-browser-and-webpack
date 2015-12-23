@@ -33,12 +33,10 @@ gulp.task('spec-console', function() {
     .pipe(jasmineBrowser.headless({whenReady: plugin.whenReady}));
 });
 
-gulp.task('default', function(){
-  var watchConfig = JSON.parse(JSON.stringify(webpackConfig))
-  watchConfig.watch = true;
-
+gulp.task('spec-console-watch', function(){
+  webpackConfig.watch = true
   return gulp.src(specFiles)
-    .pipe(webpack(watchConfig))
+    .pipe(webpack(webpackConfig))
     .pipe(jasmineBrowser.specRunner({console: true}))
     .pipe(jasmineBrowser.headless({whenReady: plugin.whenReady}));
 });
